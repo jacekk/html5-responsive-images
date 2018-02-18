@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Resolution switching</title>
+    <style>
+        html, body {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <img
+        src="
+            images/stones-1200px-wide.jpg
+        "
+        srcset="
+            images/stones-400px-wide.jpg 400w,
+            images/stones-800px-wide.jpg 800w,
+            images/stones-1200px-wide.jpg 1200w
+        "
+        sizes="
+            (max-width: 500px) 300px,
+            (max-width: 900px) 750px,
+            100%
+        "
+    />
+    <img
+        src="
+            images/stones-1200px-wide.jpg
+        "
+        srcset="
+            images/stones-400px-wide.jpg,
+            images/stones-800px-wide.jpg 1.5x,
+            images/stones-1200px-wide.jpg 2x
+        "
+    />
+    <blockquote>
+        Resolution switching: The problem whereby you want to serve smaller image files to narrow screen devices, as they don't need huge images like desktop displays do — and also optionally that you want to serve different resolution images to high density/low density screens. This can be solved using vector graphics (SVG images), and the srcset and sizes attributes.
+    </blockquote>
+    <hr/>
+    <ol>
+        <li>Amount of entries in "srcset" and "sizes" have to be the same.</li>
+        <li>Second param of "srcset" entry gives actual image size (width).</li>
+        <li>Second param of "srcset" entry can match screen density.</li>
+        <li>Second param of "sizes" can be in %, but only without media query. Otherwise, bad shit happens.</li>
+        <li>Chromomium-based browsers do not fetch smaller image if bigger already fetched (in case of window narrowing).</li>
+    </ol>
+</body> 
+
+</html>

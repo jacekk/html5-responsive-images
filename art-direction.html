@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Art direction</title>
+    <style>
+        html, body {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <picture>
+        <source media="(max-width: 500px)" srcset="images/stones-400px-wide.jpg">
+        <source media="(max-width: 900px)" srcset="images/stones-800px-wide.jpg">
+        <img src="images/stones-1200px-wide.jpg" />
+    </picture>
+    <blockquote>
+        Art direction: The problem whereby you want to serve cropped images for different layouts — for example a landscape image showing a full scene for a desktop layout, and a portrait image showing the main subject zoomed in close for a mobile layout. This can be solved using the <picture> element.
+    </blockquote>
+    <hr/>
+    <ol>
+        <li>Chromomium-based browsers fetch image on media change, even if image has already been loaded.</li>
+    </ol>
+</body> 
+
+</html>

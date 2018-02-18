@@ -1,0 +1,14 @@
+{
+  "name": "responsive-images",
+  "version": "0.0.1",
+  "description": "",
+  "main": "npm start",
+  "scripts": {
+    "start": "serve ."
+  },
+  "author": "JacekK",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^6.4.10"
+  }
+}
