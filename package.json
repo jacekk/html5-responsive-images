@@ -9,6 +9,6 @@
   "author": "JacekK",
   "license": "MIT",
   "devDependencies": {
-    "serve": "^6.4.10"
+    "serve": "^10.1.2"
   }
 }
